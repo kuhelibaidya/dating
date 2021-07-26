@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace API.Dtos
 {
-    public class UserDto
+    public class memberDto
     {
+        public int Id { get; set; }
         public string username { get; set; }
-        public string token { get; set; }
-        
+
         public string PhotoUrl{ get; set; }
 
         public int Age{ get; set; }
