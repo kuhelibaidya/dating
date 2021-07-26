@@ -1,8 +1,8 @@
-<div class="form-group">
+<div class="form-group me-sm-2">
     <input 
     [class.is-invalid]="ngControl.touched && ngControl.invalid"
     type={{type}}
-    class="form-control" 
+    class="form-control me-2" 
     [formControl]="ngControl.control"
     placeholder={{label}}  >
     <div *ngIf="ngControl.control.errors?.required"

@@ -31,7 +31,14 @@ namespace API.Controllers
             {
                 username = registerdto.Username.ToLower(),
                 passwordHash =hmac.ComputeHash(Encoding.UTF8.GetBytes(registerdto.Password)),
-                passwordSalt=hmac.Key
+                passwordSalt=hmac.Key,
+                KnownAs=registerdto.KnownAs,
+                City=registerdto.City,
+                Country=registerdto.Country,
+                Interests=registerdto.Interests,
+                DateOfBirth=registerdto.DateOfBirth,
+                
+               
 
             };
             _context.Users.Add(user);
@@ -58,10 +65,7 @@ namespace API.Controllers
             {
                 username=user.username,
                 token=_tokenService.CreateToken(user),
-                KnownAs=user.KnownAs,
-                City=user.City,
-                Country=user.Country,
-                Age=user.GetAge(),
+               
                 
                 
 

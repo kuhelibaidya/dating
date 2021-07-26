@@ -1,4 +1,14 @@
-<p>member-list works!</p>
-<div class="row">
-    <p *ngFor="let member of members">{{member.username}}</p>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+<div *ngFor="let member of members " class="col-6">
+
+    
+    <div class="card" style="width: 18rem;">
+        <img src=""class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{member.username}}</h5>
+          <p class="card-text">I am from {{member.city}}</p>
+          <a class="btn btn-primary">Profile</a>
+        </div>
+      </div>
+</div>
 </div>
